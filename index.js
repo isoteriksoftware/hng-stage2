@@ -1,4 +1,7 @@
-const app = require("express")();
+const express = require("express");
+
+const app = express();
+app.use(express.json());
 
 app.get("/", (req, res) => {
   return res.json({
@@ -10,7 +13,7 @@ app.get("/", (req, res) => {
 });
 
 app.post("/", (req, res) => {
-  const body = req.body;
+  const body = req.body ?? {};
   const x = parseInt(body.x ?? 0);
   const y = parseInt(body.y ?? 0);
   let result = 0;
