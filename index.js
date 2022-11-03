@@ -3,14 +3,14 @@ const express = require("express");
 const app = express();
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  return res.json({
-    slackUsername: "imranabdulmalik01",
-    backend: true,
-    age: 20,
-    bio: "My name is Imran Abdulmalik, a programming enthusiast!",
-  });
-});
+// app.get("/", (req, res) => {
+//   return res.json({
+//     slackUsername: "imranabdulmalik01",
+//     backend: true,
+//     age: 20,
+//     bio: "My name is Imran Abdulmalik, a programming enthusiast!",
+//   });
+// });
 
 app.post("/", (req, res) => {
   const body = req.body ?? {};
